@@ -20,18 +20,17 @@ class App extends Component {
 
     const url = searchUrl + this.state.word
     return (
-        <div className="App">
-          <header className="App-header">
-            <h1>Hakukone</h1>
-            <input
-              type="search"
-              onChange={this.handleChange}
-            />
-            <form action={url} method="get">
-              <a href={this.state.word.length < 1 ? false : url} >Hae</a>
-            </form>
-          </header>
-        </div>
+      <div className="App">
+        <header className="App-header">
+          <h1>Hakukone</h1>
+          <input
+            type="search"
+            onChange={this.handleChange}
+            style={{ display: "inline-block" }}
+          />
+          <a href={this.state.word.length < 1 ? undefined : url} >Hae</a>
+        </header>
+      </div>
     );
   }
 }
